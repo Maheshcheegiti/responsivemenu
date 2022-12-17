@@ -1,0 +1,143 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+label{
+    font-size: 4vh;
+    margin: 0 6vh;
+    color: #283f47;
+}
+nav{
+    background: linear-gradient(90deg,#e2424f,#f8f2ef);
+    height: 10vh;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.6);
+    line-height: 10vh;
+    position:sticky;
+    top: 0;
+    z-index: 999;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 2.5vh;
+}
+nav ul li a{
+    color: #283f47;
+    font-size: 2vh;
+    padding: 1vh;
+    border-radius: 1vh;
+    transition: all 0.5s;
+
+}
+a.active,nav a:hover{
+    background-color: #283f47;
+    color: #fb848c;
+    
+}
+.checkbtn{
+    color: #283f47;
+    float: right;
+    cursor: pointer;
+    display: none;
+}
+nav label{
+    line-height: 8.7vh;
+}
+nav label :hover{
+    color: #e2424f;
+    transition: 0.5s;
+}
+nav label i{
+    font-size: 3vh;
+}
+#check{
+    display: none;
+}
+#check:checked ~.checkbtn{
+    color: #e2424f;
+}
+section{
+    background-image: url("bg.jpg");
+    position: relative;
+    z-index: -999;
+    /* background-size: cover; */
+    background-size: 85vw;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 80vh;
+    text-align: center;
+}
+section img{
+    height: 80vh;
+}
+footer{
+    height: 10vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+footer div{
+    font-size: 2vh;
+    color: #283f47;
+}
+footer a{
+    color: #e2424f;
+}
+@media only screen and (max-width:950px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        width: 100%;
+        position: fixed;
+        z-index: -1;
+        height: 90vh;
+        background: linear-gradient(#283f47,#f8f2ef);
+        opacity: 0.9;
+        left: 100%;
+        text-align: center;
+        transition: all 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 6vh 0;
+        line-height: 4vh;
+    }
+    nav ul li a{
+        font-size: 2.5vh;
+    }
+    #check:checked ~ul{
+        left: 0%;
+    }
+    nav ul li a {
+        color: #f8f2ef ;
+
+    }
+    a.active,nav a:hover{
+        background-color: #fb848c;
+        color: #283f47;
+        
+    }
+    .checkbtn{
+        color: #283f47;
+    }
+    section{
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+}
+@media only screen and (max-width:380px){
+    nav label,#check{
+        font-size: 8vw;
+        margin: 0 4vh;
+    }
+}
